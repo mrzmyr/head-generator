@@ -1,0 +1,79 @@
+<% for(var s = 0; s < sections.length; s++) { section = sections[s]; %>
+
+	<h2><% if(section.title) { %><%= section.title %><% } %></h2>
+	<hr>
+
+	<% for(var r = 0; r < section.rows.length; r++) { row = section.rows[r]; %>
+
+	<div class="row-fluid">
+
+		<% for(var c = 0; c < row.columns.length; c++) { column = row.columns[c]; %>
+
+		<div class="span6">
+			<div class="form-horizontal">
+			<fieldset>
+
+			<% if(column.title) { %>
+			<h4>
+				<input type=checkbox id=<%= column.id %>-checkbox class="column-checkbox" <% if(!column.disabled) { %>checked<% } %>>
+				<label for="<%= column.id %>-checkbox">
+					<%= column.title %>
+				</label>
+				<% if(column.refrence) { %>
+					<small class="refrence">
+						<a href="<%= column.refrence %>" title="Refrence" rel="external">Refrence</a>
+					</small>
+				<% } %>
+			</h4>
+			<% } %>
+
+			<% for(var i = 0; i < column.items.length; i++) { item = column.items[i]; %>
+
+			<div class="control-group <% if(column.disabled || item.disabled) { %> disabled<% } %>">
+
+				<label class="control-label" for="<%= item.id %>"><%= item.title %></label>
+				<div class="controls">
+					<div class="input-append span12">
+						<% if(item.type == 'textarea') { %>
+
+						<textarea class="span9" id="<%= item.id %>" placeholder="<%= item.ph %>" rows=<%= item.rows %>><%= item.value %></textarea>
+						
+						<% } else if(item.type == 'select') { %>
+
+						<select id="<%= item.id %>" class="input span9">
+							<% for(var o = 0; o < item.options.length; o++) { option = item.options[o]; %>
+							<option value="<%= option.value %>"><%= option.key %></option>
+							<% } %>
+						</select>
+
+						<% } else { %>
+
+						<input type="<%= item.type %>" id="<%= item.id %>" class="span9 input" value="<%= item.value %>" placeholder="<%= item.ph %>">
+						
+						<% } %>
+						<span class="add-on">
+							<input type=checkbox id="<%= item.id %>-checkbox" class="item-checkbox" <% if(!column.disabled && !item.disabled) { %>checked<% } %>>
+						</span>
+
+						<% if(item.refrence) { %>
+						<p class="help-inline muted">
+							<a href="<%= item.refrence %>" title="Refrence" rel="external">Refrence</a>
+						</p>
+						<% } %>
+
+						<% if(item.help) { %>
+						<p class="help-<%= item.help.type %> muted"><%= item.help.text %></p>
+						<% } %>
+					</div>
+				</div>
+
+			</div>
+
+			<% } %>
+			</fieldset>
+			</div>
+		</div>
+		<% } %>
+	</div>
+	<% } %>
+<% } %>

@@ -1,0 +1,70 @@
+<html<% if(data.language) { %> lang="<%= data.language %>"<% } %>>
+<head<% if(f.isOpenGraph) { %> prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"<% } %>>
+	<% if(data.charset) { %><meta charset="<%= data.charset %>"><% } %>
+
+	<% if(data.title) { %><title><%= data.title %></title><% } %>
+
+	<!-- basic -->
+	<% if(data.author) { %><meta name="author" content="<%= data.author %>"><% } %>
+	<% if(data.keywords) { %><meta name="keywords" content="<%= data.keywords %>"><% } %>
+	<% if(data.description) { %><meta name="description" content="<%= data.description %>"><% } %>
+	<% if(data.robots) { %><meta name="robots" content="<%= data.robots %>"><% } %>
+
+	<% if(f.getViewport(data)) { %>
+	<!-- viewport -->
+	<meta name="viewport" content="<%= f.getViewport(data) %>">
+	<% } %>
+
+	<% if(data['app-capable']) { %><meta name="apple-mobile-web-app-capable" content="<%= data['app-capable'] %>"><% } %>
+	<% if(data['status-bar-style']) { %><meta name="apple-mobile-web-app-status-bar-style" content="<%= data['status-bar-style'] %>"><% } %>
+	<% if(data['format-detection']) { %><meta name="format-detection" content="<%= data['format-detection'] %>"><% } %>
+
+	<% if(data.imagetoolbar || data.xuacompatible) { %>
+	<!--[if ie]>
+		<% if(data.xuacompatible) { %><meta http-equiv="X-UA-Compatible" content="<%= data.xuacompatible %>"><% } %>
+		<% if(data.imagetoolbar) { %><meta http-equiv="imagetoolbar" content="<%= data.imagetoolbar %>" /><% } %>
+	<![endif]-->
+	<% } %>
+
+	<% if(data['fb-app-id'] || data['og-type'] || data['og-url'] || data['og-image'] || data['og-title'] || data['og-description']) { %>
+	<!-- open-graph -->
+	<% if(data['fb-app-id']) { %><meta property="fb:app_id" content="<%= data['fb-app-id'] %>"><% } %>
+	<% if(data['og-type']) { %><meta property="og:type" content="<%= data['og-type'] %>"><% } %>
+	<% if(data['og-url']) { %><meta property="og:url" content="<%= data['og-url'] %>"><% } %>
+	<% if(data['og-image']) { %><meta property="og:image" content="<%= data['og-image'] %>"><% } %>
+	<% if(data['og-title']) { %><meta property="og:title" content="<%= data['og-title'] %>"><% } %>
+	<% if(data['og-description']) { %><meta property="og:description" content="<%= data['og-description'] %>"><% } %>
+	<% } %>
+
+	<% if(data['ip-name'] || data['ip-description'] || data['ip-image']) { %>
+	<!-- itemsprops -->
+	<% if(data['ip-name']) { %><meta itemprop="name" content="title of your content"><% } %>
+	<% if(data['ip-description']) { %><meta itemprop="description" content="description"><% } %>
+	<% if(data['ip-image']) { %><meta itemprop="image" content="image url"><% } %>
+	<% } %>
+
+	<!-- links -->
+	<% if(data.canonical) { %><link rel="canonical" href="<%= data.canonical %>"><% } %>
+	<% if(data.favicon) { %><link rel="shortcut icon" href="<%= data.favicon %>"><% } %>
+	
+	<% if(data['app-icon-default']) { %><link rel="apple-touch-icon" href="<%= data['app-icon-default'] %>"><% } %>
+	<% if(data['app-icon-default-72']) { %><link rel="apple-touch-icon" sizes="72x72" href="<%= data['app-icon-default-72'] %>"><% } %>
+	<% if(data['app-icon-default-114']) { %><link rel="apple-touch-icon" sizes="114x114" href="<%= data['app-icon-default-114'] %>"><% } %>
+
+	<% if(data['pre-app-icon-default']) { %><link rel="apple-touch-icon-precomposed" href="<%= data['pre-app-icon-default'] %>"><% } %>
+	<% if(data['pre-app-icon-72']) { %><link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= data['pre-app-icon-72'] %>"><% } %>
+	<% if(data['pre-app-icon-114']) { %><link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= data['pre-app-icon-114'] %>"><% } %>
+
+	<% if(data['startup-web'] || data['startup-web-highres'] || data['startup-landscape'] || data['startup-portrait'] || data['startup-landscape-highres'] || data['startup-portrait-highres']) { %>
+	<!-- Startup-Screens -->
+
+	<% if(data['startup-web']) { %><link rel="apple-touch-startup-image" href="<%= data['startup-web'] %>" media="screen and (max-device-width: 320px)"><% } %>
+	<% if(data['startup-web-highres']) { %><link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="<%= data['startup-web-highres'] %>"><% } %>
+	<% if(data['startup-landscape']) { %><link rel="apple-touch-startup-image" href="<%= data['startup-landscape'] %>" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"><% } %>
+	<% if(data['startup-portrait']) { %><link rel="apple-touch-startup-image" href="<%= data['startup-portrait'] %>" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"><% } %>
+	<% if(data['startup-landscape-highres']) { %><link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="<%= data['startup-landscape-highres'] %>"><% } %>
+	<% if(data['startup-portrait-highres']) { %><link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="<%= data['startup-portrait-highres'] %>"><% } %>
+
+	<% } %>
+
+</head>
