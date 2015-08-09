@@ -6,6 +6,8 @@ I always have the problem that i need a individual head for simple or
 extended projects and this is a project which generates you the whole bunch of stuff 
 just with a bit input from you.
 
+[Check it out!](http://mrzmyr.github.io/head-generator)
+
 ==============
 
 ### options
