@@ -83,7 +83,8 @@ var sections = [
 							title: 'Generator', 
 							type: 'text', 
 							ph: 'e.g. Wordpress', 
-						},
+							disabled: true
+						}
 					] 
 				}
 			]
