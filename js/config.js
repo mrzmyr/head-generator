@@ -19,11 +19,12 @@ var sections = [
 							type: 'text', 
 							ph: 'The Joker', 
 						},
-						{ 
-							id: 'url',
-							title: 'URL', 
+						{
+							id: 'base',
+							title: 'Base', 
 							type: 'text', 
-							ph: 'http://some-awesome-app.com', 
+							ph: 'http://www.example.com/page.html',
+							refrence: 'https://developer.mozilla.org/en/docs/Web/HTML/Element/base'
 						},
 						{
 							id: 'charset',
