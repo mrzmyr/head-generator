@@ -97,20 +97,20 @@ var sections = [
 				refrence: 'https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html',
 				items: [
 					{ 
-						id: 'viewport-width',
+						id: 'width',
 						title: 'width', 
 						type: 'text', 
 						value : 'device-width', 
 					},
 					{
-						id: 'viewport-height',
+						id: 'height',
 						title: 'height', 
 						type: 'text', 
 						value: 'device-height',
 						disabled: true
 					},
 					{
-						id: 'viewport-user-scaleable',
+						id: 'user-scaleable',
 						title: 'user-scalable', 
 						type: 'select',
 						options: [
@@ -120,19 +120,19 @@ var sections = [
 						disabled: true
 					},
 					{
-						id: 'viewport-initial-scale',
+						id: 'initial-scale',
 						title: 'initial-scale', 
 						type: 'number', 
 						value: 1, 
 					},
 					{
-						id: 'viewport-minimum-scale',
+						id: 'minimum-scale',
 						title: 'minimum-scale', 
 						type: 'number', 
 						value: 1, 
 					},
 					{
-						id: 'viewport-maximum-scale',
+						id: 'maximum-scale',
 						title: 'maximum-scale', 
 						type: 'number', 
 						value: 1,

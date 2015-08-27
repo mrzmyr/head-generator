@@ -4,7 +4,7 @@ $(function () {
 
 		this.getViewport = function (data) {
 			
-			var props = ['viewport-width', 'viewport-height', 'viewport-user-scaleable', 'viewport-initial-scale', 'viewport-maximum-scale', 'viewport-minimum-scale'];
+			var props = ['width', 'height', 'user-scaleable', 'initial-scale', 'maximum-scale', 'minimum-scale'];
 			var result = [];
 
 			for(p in props) {
