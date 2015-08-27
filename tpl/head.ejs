@@ -50,23 +50,11 @@
 	<% if(data.favicon) { %><link rel="shortcut icon" href="<%= data.favicon %>"><% } %>
 	
 	<% if(data['app-icon-default']) { %><link rel="apple-touch-icon" href="<%= data['app-icon-default'] %>"><% } %>
-	<% if(data['app-icon-default-72']) { %><link rel="apple-touch-icon" sizes="72x72" href="<%= data['app-icon-default-72'] %>"><% } %>
-	<% if(data['app-icon-default-114']) { %><link rel="apple-touch-icon" sizes="114x114" href="<%= data['app-icon-default-114'] %>"><% } %>
+	<% if(data['app-icon-ipad']) { %><link rel="apple-touch-icon" sizes="76x76" href="<%= data['app-icon-ipad'] %>"><% } %>
+	<% if(data['app-icon-iphone-retina']) { %><link rel="apple-touch-icon" sizes="120x120" href="<%= data['app-icon-iphone-retina'] %>"><% } %>
+	<% if(data['app-icon-ipad-retina']) { %><link rel="apple-touch-icon" sizes="152x152" href="<%= data['app-icon-ipad-retina'] %>"><% } %>
 
-	<% if(data['pre-app-icon-default']) { %><link rel="apple-touch-icon-precomposed" href="<%= data['pre-app-icon-default'] %>"><% } %>
-	<% if(data['pre-app-icon-72']) { %><link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= data['pre-app-icon-72'] %>"><% } %>
-	<% if(data['pre-app-icon-114']) { %><link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= data['pre-app-icon-114'] %>"><% } %>
 
-	<% if(data['startup-web'] || data['startup-web-highres'] || data['startup-landscape'] || data['startup-portrait'] || data['startup-landscape-highres'] || data['startup-portrait-highres']) { %>
-	<!-- Startup-Screens -->
-
-	<% if(data['startup-web']) { %><link rel="apple-touch-startup-image" href="<%= data['startup-web'] %>" media="screen and (max-device-width: 320px)"><% } %>
-	<% if(data['startup-web-highres']) { %><link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="<%= data['startup-web-highres'] %>"><% } %>
-	<% if(data['startup-landscape']) { %><link rel="apple-touch-startup-image" href="<%= data['startup-landscape'] %>" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"><% } %>
-	<% if(data['startup-portrait']) { %><link rel="apple-touch-startup-image" href="<%= data['startup-portrait'] %>" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"><% } %>
-	<% if(data['startup-landscape-highres']) { %><link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="<%= data['startup-landscape-highres'] %>"><% } %>
-	<% if(data['startup-portrait-highres']) { %><link rel="apple-touch-startup-image" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="<%= data['startup-portrait-highres'] %>"><% } %>
-
-	<% } %>
+	<% if(data['apple-touch-startup-image']) { %><link rel="apple-touch-startup-image" href="<%= data['apple-touch-startup-image'] %>"><% } %>
 
 </head>

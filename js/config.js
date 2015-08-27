@@ -183,100 +183,46 @@ var sections = [
 					id: 'application-icons',
 					title: 'Application Icons', 
 					disabled: true,
-					refrence: 'http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/configuringwebapplications/configuringwebapplications.html',
+					refrence: 'https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html',
 					items: [
 						{
 							id: 'app-icon-default',
 							title: 'Default', 
 							type: 'text', 
 							ph : '/path/to/fav.png', 
+							reference: 'https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27'
 						},
 						{ 
-							id: 'app-icon-72',
-							title: '72x72 Pixels', 
+							id: 'app-icon-ipad',
+							title: '76x76 iPad', 
 							type: 'text', 
-							ph : '/path/to/fav_72.png', 
+							ph : '/path/to/fav_76.png', 
 						},
 						{ 
-							id: 'app-icon-114',
-							title: '114x114 Pixels (High Res)', 
+							id: 'app-icon-iphone-retina',
+							title: '120x120 iPhone Retina', 
 							type: 'text', 
-							ph : '/path/to/fav_114.png', 
+							ph : '/path/to/fav_120.png', 
+						},
+						{ 
+							id: 'app-icon-ipad-retina',
+							title: '152x152 iPad Retina', 
+							type: 'text', 
+							ph : '/path/to/fav_120.png', 
 						},
 					] 
 				},
 				{ 
-					id: 'startup-images',
-					title: 'Startup Images',
+					id: 'startup-image',
+					title: 'Startup Image',
 					disabled: true,
-					refrence: 'http://taylor.fausak.me/2012/03/27/ios-web-app-icons-and-startup-images/',
-					items: [
-						{ 
-							id: 'startup-web',
-							title: 'Web Apps (320x460)', 
-							type: 'text', 
-							ph : '/path/to/startup_web.png', 
-						},
-						{ 
-							id: 'startup-web-highres',
-							title: 'Web Apps - High Resolution (640x920)', 
-							type: 'text', 
-							ph : '/path/to/startup_web.png', 
-						},
-						{ 
-							id: 'startup-landscape',
-							title: 'iPad - landscape (748x1024)', 
-							type: 'text', 
-							ph : '/path/to/startup_landscape.png', 
-						},
-						{ 
-							id: 'startup-portrait',
-							title: 'iPad - portrait (768x1004)', 
-							type: 'text', 
-							ph : '/path/to/startup_portrait.png',
-						},
-						{ 
-							id: 'startup-landscape-highres',
-							title: 'iPad - High Resolution - landscape (1536x2008)', 
-							type: 'text', 
-							ph : '/path/to/startup_landscape_highres.png',
-						},
-						{ 
-							id: 'startup-portrait-highres',
-							title: 'iPad - High Resolution - portrait (1536x2008)',
-							type: 'text', 
-							ph : '/path/to/startup_portrait_highres.png',
-						}
-					] 
-				}
-			]
-		},{
-			columns: [
-				{ 
-					id: 'application-icons-precomposed',
-					title: 'Application Icons Precomposed', 
-					disabled: true,
-					refrence: 'http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html',
-					items: [
-						{ 
-							id: 'pre-app-icon-default',
-							title: 'Pre Default', 
-							type: 'text', 
-							ph : '/path/to/pre_fav.png', 
-						},
-						{ 
-							id: 'pre-app-icon-72',
-							title: '72x72 Pixels', 
-							type: 'text', 
-							ph : '/path/to/pre_fav_72.png', 
-						},
-						{ 
-							id: 'pre-app-icon-114',
-							title: '114x114 Pixels (High Res)', 
-							type: 'text', 
-							ph : '/path/to/pre_fav_114.png', 
-						},
-					]
+					refrence: 'https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html',
+					items: [{ 
+						id: 'apple-touch-startup-image',
+						title: 'Web Apps (320x460)',
+						type: 'text', 
+						ph: '/startup.png', 
+					}]
 				}
 			]
 		}]
