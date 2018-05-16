@@ -4,8 +4,6 @@ Generates the complete `<head>` of a HTML5 page for you.
 
 [Check it out!](http://mrzmyr.github.io/head-generator)
 
-==============
-
 ### Support
 
 * doctype
@@ -17,8 +15,6 @@ Generates the complete `<head>` of a HTML5 page for you.
 * iOS options
 * open graph 
 * item props
-
-==============
 
 ### Todo
 
